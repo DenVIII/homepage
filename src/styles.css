@@ -1,4 +1,18 @@
 /* styles.css */
+:root {
+  --background-color: #fdf0d5;
+}
+
 body {
-  background-color: rebeccapurple;
+  background-color: var(--background-color);
+}
+
+.hero-title {
+  font-size: 15rem;
+}
+
+.hero-img {
+  width: 60vw;
+  object-fit: cover;
+  border-radius: 10% 0 0 10%;
 }

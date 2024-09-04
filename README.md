@@ -1,1 +1,1 @@
-Template for the future projects
+Portfolio project for Odin curriculum
