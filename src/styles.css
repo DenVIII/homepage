@@ -3,6 +3,8 @@
 :root {
   --background-color: #fdf0d5;
   --text-color: #222;
+  --dark-blue: #003049;
+  --light-blue: #669bbc;
   --title-font: "Unbounded", sans-serif;
   --main-font: "Nunito Sans", sans-serif;
 }
@@ -25,9 +27,16 @@ body {
   background-color: var(--background-color);
 }
 
+strong {
+  text-decoration: underline;
+  color: var(--dark-blue);
+}
+
 .subtitle {
   margin-top: 20px;
 }
+
+/* navbar */
 
 .navbar,
 .menu {
@@ -50,7 +59,7 @@ body {
   left: 20%;
   width: 60%;
   height: 2px;
-  background: #222;
+  background-color: var(--dark-blue);
   transform: scaleX(0);
   transform-origin: left;
   content: "";
@@ -72,15 +81,13 @@ body {
   font-weight: 900;
 }
 
-.hero-title {
-  font-family: "Unbounded", sans-serif;
-  font-weight: 600;
-}
+/* hero section */
 
 .hero {
   position: relative;
   margin-top: 10vh;
   padding-left: 60px;
+  height: 100vh;
 }
 
 .hero-title {
@@ -90,6 +97,9 @@ body {
   max-width: 50vw;
   font-size: 4rem;
   margin-bottom: 60px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 600;
+  animation: 1s indent ease-out;
 }
 
 .hero-img {
@@ -101,4 +111,23 @@ body {
   object-fit: cover;
   border-radius: 10% 0 0 10%;
   margin: 0;
+  animation: 1.5s slide-in ease-out;
+}
+
+@keyframes indent {
+  from {
+    text-indent: 0;
+  }
+  to {
+    text-indent: 2.6ch;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
