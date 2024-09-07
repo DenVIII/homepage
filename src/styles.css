@@ -188,7 +188,7 @@ strong {
   grid-area: 2 / 9 / 3 / 13;
 }
 
-.about__card.career::before {
+/* .about__card.career::before {
   position: absolute;
   top: -25%;
   left: 0;
@@ -204,6 +204,16 @@ strong {
   left: 0;
   width: 100%;
   height: 2px;
+  background-color: var(--dark-blue);
+  content: "";
+} */
+
+.about__card.self::before {
+  position: absolute;
+
+  left: -15%;
+  height: 100%;
+  width: 2px;
   background-color: var(--dark-blue);
   content: "";
 }
