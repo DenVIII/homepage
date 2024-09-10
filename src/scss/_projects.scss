@@ -1,0 +1,9 @@
+.projects {
+  &__img {
+    width: calc(40% - 60px);
+    height: 640px;
+    img {
+      width: 100%;
+    }
+  }
+}
