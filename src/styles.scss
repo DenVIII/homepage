@@ -1,13 +1,10 @@
-/* styles.css */
+//Importing variables
+@import "./scss/variables";
 
-:root {
-  --background-color: #fdf0d5;
-  --text-color: #222;
-  --dark-blue: #003049;
-  --light-blue: #669bbc;
-  --title-font: "Unbounded", sans-serif;
-  --main-font: "Nunito Sans", sans-serif;
-}
+//Importing mixins
+@import "./scss/mixins";
+
+/* styles.css */
 
 *,
 ::after,
@@ -19,12 +16,12 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   list-style: none;
-  font-family: var(--main-font);
-  color: var(--text-color);
+  font-family: $main-font;
+  color: $text-color;
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: $background-color;
 }
 
 section,
@@ -36,8 +33,10 @@ section {
   padding: 0 80px;
 }
 
-.hero strong {
-  font-family: var(--title-font);
+.hero {
+  strong {
+    font-family: $title-font;
+  }
 }
 
 strong {
@@ -52,40 +51,39 @@ strong {
   display: flex;
   justify-content: space-between;
 }
+.menu {
+  &__item {
+    position: relative;
+    padding: 20px 30px;
+  }
+
+  &__item::after {
+    position: absolute;
+    bottom: 24%;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background-color: $dark-blue;
+    transform: scaleX(0);
+    transform-origin: left;
+    content: "";
+  }
+
+  &__item:hover {
+    cursor: pointer;
+  }
+
+  &__item:hover::after {
+    transform: scaleX(1);
+  }
+}
 
 .navbar {
   padding: 20px 80px;
 }
 
-.menu__item {
-  position: relative;
-  padding: 20px 30px;
-}
-
-.menu__item::after {
-  position: absolute;
-  bottom: 24%;
-  left: 20%;
-  width: 60%;
-  height: 2px;
-  background-color: var(--dark-blue);
-  transform: scaleX(0);
-  transform-origin: left;
-  content: "";
-}
-
-.menu__item:hover {
-  cursor: pointer;
-}
-
-.menu__item:hover::after {
-  transform: scaleX(1);
-}
-
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   font-size: 1.5rem;
   font-weight: 900;
 }
@@ -97,30 +95,30 @@ strong {
   position: relative;
   padding-right: 0;
   height: 100vh;
-}
 
-.hero-title {
-  position: relative;
-  text-align: left;
-  text-indent: 2.6ch;
-  max-width: 50vw;
-  font-size: 4rem;
-  margin-bottom: 60px;
-  font-family: var(--title-font);
-  font-weight: 600;
-  animation: 1s indent ease-out;
-}
+  &__title {
+    position: relative;
+    text-align: left;
+    text-indent: 2.6ch;
+    max-width: 50vw;
+    font-size: 4rem;
+    margin-bottom: 60px;
+    font-family: $title-font;
+    font-weight: 600;
+    animation: 1s indent ease-out;
+  }
 
-.hero-img {
-  position: absolute;
-  top: 0%;
-  z-index: -1;
-  right: 0%;
-  width: 40vw;
-  object-fit: cover;
-  border-radius: 10% 0 0 10%;
-  margin: 0;
-  animation: 1.5s slide-in ease-out;
+  &__img {
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+    right: 0%;
+    width: 40vw;
+    object-fit: cover;
+    border-radius: 10% 0 0 10%;
+    margin: 0;
+    animation: 1.5s slide-in ease-out;
+  }
 }
 
 @keyframes indent {
@@ -160,6 +158,35 @@ strong {
   grid-column-gap: 16px;
   column-gap: 16px;
   padding: 0 60px;
+
+  &__card {
+    padding: 0 30px;
+    position: relative;
+  }
+
+  & .title {
+    grid-area: 1 / 1 / 2 / 13;
+    display: flex;
+  }
+
+  &__card.career {
+    grid-area: 2 / 1 / 3 / 8;
+    margin-top: auto;
+  }
+
+  &__card.self {
+    grid-area: 2 / 9 / 3 / 13;
+  }
+
+  &__card.self::before {
+    position: absolute;
+
+    left: -15%;
+    height: 100%;
+    width: 2px;
+    background-color: $dark-blue;
+    content: "";
+  }
 }
 
 /* .about > * {
@@ -169,32 +196,13 @@ strong {
   justify-content: center;
 } */
 
-.about__card {
-  padding: 0 30px;
-  position: relative;
-}
-
-.about .title {
-  grid-area: 1 / 1 / 2 / 13;
-  display: flex;
-}
-
-.about__card.career {
-  grid-area: 2 / 1 / 3 / 8;
-  margin-top: auto;
-}
-
-.about__card.self {
-  grid-area: 2 / 9 / 3 / 13;
-}
-
 /* .about__card.career::before {
   position: absolute;
   top: -25%;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--dark-blue);
+  background-color: $dark-blue;
   content: "";
 }
 
@@ -204,19 +212,10 @@ strong {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--dark-blue);
+  background-color: $dark-blue;
   content: "";
 } */
 
-.about__card.self::before {
-  position: absolute;
-
-  left: -15%;
-  height: 100%;
-  width: 2px;
-  background-color: var(--dark-blue);
-  content: "";
-}
 /* 
 .about .title {
   grid-area: 1 / 1 / 2 / 3;
@@ -230,7 +229,7 @@ strong {
 
 .title,
 .subtitle {
-  font-family: var(--title-font);
+  font-family: $title-font;
   font-weight: 600;
 }
 
