@@ -1,0 +1,26 @@
+@keyframes indent {
+  from {
+    text-indent: 0;
+  }
+  to {
+    text-indent: 2.6ch;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

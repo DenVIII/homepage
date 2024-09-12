@@ -1,11 +1,30 @@
 // Colors
 
+$black: #222;
+$white: #f9f5f0;
 $background-color: #fdf0d5;
-$text-color: #222;
+$text-color: $black;
 $dark-blue: #003049;
 $light-blue: #669bbc;
+$accent-color: #c1121f;
 
 // Fonts
 
 $title-font: "Unbounded", sans-serif;
 $main-font: "Nunito Sans", sans-serif;
+$base-text-size: 1rem;
+
+// Borders
+
+$base-border-radius: 40px;
+$small-border-radius: 5px;
+$base-border-width: 3px;
+$bold-border-width: 5px;
+
+// Animations
+
+$base-scale: 1.05;
+
+// Project card
+
+$card-width: 480px;
