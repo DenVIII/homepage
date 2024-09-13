@@ -10,21 +10,31 @@
 
   &__descr {
     position: absolute;
-    top: 45%;
+    top: 0;
     left: 0;
     right: 0;
-    margin: 0 auto;
-    width: calc($card-width - 60px);
+    bottom: 0;
+    margin: auto;
+    width: calc($card-width - 80px);
+    height: calc($card-width - 80px);
     transform: scaleY(0);
     transform-origin: center;
     transition: 0.5s ease;
-    opacity: 0.85;
-    background-color: $white;
+
+    background-color: rgb(250, 245, 240, 0.5);
     pointer-events: none;
     /*  border-right: $bold-border-width solid $accent-color;
     border-bottom: $bold-border-width solid $accent-color; */
-    border-radius: $small-border-radius;
+    border-radius: calc(($card-width - 60px) / 2);
     @include flexCenter(column);
+    h3,
+    p {
+      background-color: $white;
+      padding: 0.25em;
+    }
+    p {
+      text-indent: 0ch;
+    }
   }
 
   &__img {
