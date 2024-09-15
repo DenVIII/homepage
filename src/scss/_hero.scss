@@ -1,0 +1,41 @@
+.hero {
+  position: relative;
+  margin-top: 40px;
+  padding-right: 0;
+  height: 80vh;
+
+  &__title {
+    position: relative;
+    text-align: left;
+    text-indent: 2.6ch;
+    max-width: 50vw;
+    font-size: 4rem;
+    margin-bottom: 60px;
+    font-family: $title-font;
+    font-weight: 600;
+    animation: 1s indent ease-out;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10% 0 0 10%;
+    margin: 0;
+    animation: 1.5s slide-in ease-out;
+  }
+  .btn__background {
+    margin-top: 30px;
+  }
+  .btn {
+    transform-origin: 0% 0%;
+  }
+}
+
+.hero {
+  strong {
+    font-family: $title-font;
+  }
+}

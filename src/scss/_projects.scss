@@ -24,15 +24,15 @@
     outline-offset: -15px;
     background-color: rgb(250, 245, 240, 0.5);
     pointer-events: none;
-    /*  border-right: $bold-border-width solid $accent-color;
-    border-bottom: $bold-border-width solid $accent-color; */
     border-radius: calc(($card-width - 60px) / 2);
     @include flexCenter(column);
+
     h3,
     p {
       background-color: $white;
       padding: 0.25em;
     }
+
     p {
       text-indent: 0ch;
     }
