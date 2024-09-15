@@ -15,12 +15,13 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    width: calc($card-width - 80px);
-    height: calc($card-width - 80px);
+    width: calc($card-width - 160px);
+    height: calc($card-width - 160px);
     transform: scaleY(0);
     transform-origin: center;
     transition: 0.5s ease;
-
+    outline: $base-border-width solid $white;
+    outline-offset: -15px;
     background-color: rgb(250, 245, 240, 0.5);
     pointer-events: none;
     /*  border-right: $bold-border-width solid $accent-color;
