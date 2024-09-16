@@ -47,7 +47,7 @@ body {
 }
 
 section {
-  padding: 0 100px;
+  padding: 0 160px;
 }
 
 strong,
@@ -85,7 +85,6 @@ a {
 }
 
 .description {
-  text-indent: 1ch;
   text-align: justify;
   font-size: $base-text-size;
 }
@@ -98,6 +97,7 @@ a {
   border-radius: $small-border-radius;
   color: $black;
   font-size: $base-text-size;
+  transform-origin: 0% 0%;
   &__background {
     width: calc(200px * $base-scale);
     height: calc(60px * $base-scale);

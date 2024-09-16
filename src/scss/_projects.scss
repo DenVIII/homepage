@@ -84,10 +84,11 @@
     top: 300px;
   }
 
-  &__btn {
+  .projects__btn {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transform-origin: top center;
   }
 
   &__btn img {
