@@ -13,11 +13,11 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">Денис В.</div>
+      <a href="#" class="logo">Денис В.</a>
       <ul class="menu">
-        <li class="menu__item">Обо мне</li>
-        <li class="menu__item">Проекты</li>
-        <li class="menu__item">Контакты</li>
+        <a href="#projects"><li class="menu__item">Проекты</li></a>
+        <a href="#about"><li class="menu__item">Обо мне</li></a>
+        <a href="#contacts"><li class="menu__item">Контакты</li></a>
       </ul>
     </nav>
     <section class="hero">
@@ -33,10 +33,10 @@
       </p>
       <img src="./img/hero-img.jpg" alt="" class="hero__img" />
       <div class="btn__background">
-        <button type="button" class="btn">Связаться со мной</button>
+        <a href="#contacts"><button type="button" class="btn">Связаться со мной</button></a>
       </div>
     </section>
-    <section class="projects">
+    <section id="projects" class="projects">
       <h2 class="title">Некоторые работы:</h2>
       <div class="container">
         <a href="#" class="projects__card">
@@ -74,7 +74,7 @@
           </button></div
       ></a>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <h2 class="title">Обо мне:</h2>
       <div class="about__card career">
         <p class="description">
@@ -100,7 +100,7 @@
         </p>
       </div>
     </section>
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <h2 class="title">Будем<br> на связи: <div class="contacts__email">
         <a
           href="mailto:Denis226@gmail.com?subject=Предложение%20по%20сотрудничеству&body=Здравствуйте!"
@@ -119,55 +119,17 @@
         ><a href="viber://chat?number= [79787363022]"
           >Viber</a>
       </div>
-      <!-- <div class="container">
-        <h3 class="subtitle">Будем <BR></BR>на связи!</h3>
-        <div class="contacts__email">
-          <a
-            href="mailto:Denis226@gmail.com?subject=Предложение%20по%20сотрудничеству&body=Здравствуйте!"
-            >Denis226@gmail.com</a
-          >
-        </div>
-          <div class="contacts__media">
-            <a href="https://github.com/DenVIII" target="_blank"
-              ><img src="./img/github-mark.svg" alt="#" class="contacts__icon"
-            /></a>
-            <a href="https://t.me/DenVIII"
-              ><img src="./img/logo-tg.svg" alt="#" class="contacts__icon" /></a
-            ><a href="https://vk.me/id__13_37" target="_blank"
-              ><img src="./img/logo-vk.svg" alt="#" class="contacts__icon" /></a
-            ><a href="viber://chat?number= [79787363022]"
-              ><img src="./img/logo-viber.svg" alt="#" class="contacts__icon"
-            /></a>
-          </div>
-        </div> -->
-        <!-- <div class="container">
-        <div class="contacts__email">
-          <p class="description">
-            Напишите на почту:
-            <a
-              href="mailto:Denis226@gmail.com?subject=Предложение%20по%20сотрудничеству&body=Здравствуйте!"
-              ><span class="accent-text">@</span></a
-            >
-          </p>
-        </div>
-        <div class="contacts__github">
-          <p class="description">Мой GitHub:</p>
-          <a href="https://github.com/DenVIII" target="_blank"
-            ><img src="./img/github-mark.svg" alt="#" class="contacts__icon"
-          /></a>
-        </div>
-        <div class="contacts__media">
-          <p class="description">И где я еще бываю:</p>
-          <a href="https://t.me/DenVIII"
-            ><img src="./img/logo-tg.svg" alt="#" class="contacts__icon" /></a
-          ><a href="https://vk.me/id__13_37" target="_blank"
-            ><img src="./img/logo-vk.svg" alt="#" class="contacts__icon" /></a
-          ><a href="viber://chat?number= [79787363022]"
-            ><img src="./img/logo-viber.svg" alt="#" class="contacts__icon"
-          /></a>
-        </div> -->
       </div>
     </section>
-    <footer></footer>
+    <footer>
+      <p class="description">© Denis Vinogradov
+        <br>
+        2024
+      </p>
+      <p class="description">Made by me
+        <br>
+        Designed by me</p>
+      
+    </footer>
   </body>
 </html>

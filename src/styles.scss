@@ -26,6 +26,10 @@
 
 @import "./scss/contacts";
 
+// Improting footer
+
+@import "./scss/footer";
+
 /* styles.css */
 
 *,
@@ -40,6 +44,7 @@
   list-style: none;
   font-family: $main-font;
   color: $text-color;
+  scroll-behavior: smooth;
 }
 
 body {
