@@ -1,42 +1,12 @@
-/* .contacts {
-  @include flexCenter(column);
-  margin-bottom: 60px;
-
-  .container {
-    @include flexCenter(column);
-  }
-
-  &__icon {
-    width: 50px;
-  }
-
-  &__email {
-    font-size: 2rem;
-    font-weight: bold;
-    border-bottom: $base-border-width solid $black;
-  }
-
-  &__media {
-    @include flexCenter;
-    gap: 25px;
-  }
-
-  .title {
-    margin-bottom: 60px;
-  }
-
-  .subtitle {
-    font-weight: 400;
-  }
-} */
-
 .contacts {
   @include flexCenter(column);
   margin-bottom: 100px;
+
   &__email {
     display: flex;
     align-items: end;
     font-size: 1.5em;
+    margin-left: 15px;
   }
 
   &__media {
