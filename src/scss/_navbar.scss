@@ -1,4 +1,25 @@
-/* navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  .logo:hover {
+    background-color: $white;
+    transform: scale(0.95);
+  }
+}
+
+.navbar.scrolled {
+  .logo {
+    background-color: $white;
+    border-radius: $small-border-radius;
+  }
+  .menu {
+    &__item {
+      background-color: $white;
+      border-radius: $small-border-radius;
+    }
+  }
+}
 
 .navbar,
 .menu {
@@ -11,25 +32,6 @@
     padding: 20px 30px;
   }
 
-  &__item::after {
-    position: absolute;
-    margin: auto 0;
-    top: 0;
-    bottom: 0;
-    left: 15%;
-    right: 0;
-    z-index: -1;
-    /* bottom: 24%;
-    left: 20%; */
-    border-radius: $small-border-radius;
-    width: 70%;
-    height: 80%;
-    background-color: $accent-color;
-    transform: scaleY(0);
-    transform-origin: left;
-    content: "";
-  }
-
   &__item::before {
     position: absolute;
     z-index: 1;
@@ -37,7 +39,7 @@
     left: 25%;
     width: 50%;
     height: 2px;
-    background-color: $white;
+    background-color: $black;
     transform: scaleX(0);
     transform-origin: left;
     transition-delay: 0.25s;
@@ -46,11 +48,8 @@
 
   &__item:hover {
     cursor: pointer;
-    color: $white;
-  }
-
-  &__item:hover::after {
-    transform: scaleY(1);
+    background-color: $white;
+    transform: scale(0.95);
   }
 
   &__item:hover::before {

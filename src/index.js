@@ -1,7 +1,15 @@
 import "./styles.scss"
 
-/* const gitBtn = document.querySelector("#git-btn")
+window.addEventListener("scroll", () => {
+  // Получаем элемент навигационной панели
+  const navbar = document.querySelector(".navbar")
 
-gitBtn.onclick = function () {
-  location.href = "https://github.com/DenVIII"
-} */
+  // Проверяем, превышает ли текущая позиция прокрутки заданное значение
+  if (window.scrollY > 50) {
+    // Если да, добавляем класс, который изменит стиль навигационной панели
+    navbar.classList.add("scrolled")
+  } else {
+    // В противном случае удаляем класс
+    navbar.classList.remove("scrolled")
+  }
+})
