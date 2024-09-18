@@ -1,0 +1,40 @@
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  section {
+    padding: 0 60px;
+    margin-bottom: 80px;
+  }
+
+  .title {
+    margin-bottom: 60px;
+  }
+  .navbar {
+    padding: 15px 60px;
+
+    .menu {
+      &__item {
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  .hero {
+    $padding-top: 30px;
+    min-height: 90vh;
+    padding-top: $padding-top;
+
+    &__img {
+      top: $padding-top;
+    }
+  }
+
+  $card-width: 300px;
+
+  .projects {
+    &__img {
+      max-height: $card-width;
+    }
+  }
+}

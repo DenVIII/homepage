@@ -2,6 +2,15 @@
   position: sticky;
   top: 0;
   z-index: 2;
+  padding: 20px 160px;
+
+  .logo {
+    @include flexCenter;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: $small-border-radius;
+  }
+
   .logo:hover {
     background-color: $black;
     color: $white;
@@ -67,15 +76,4 @@
   &__item:hover::before {
     transform: scaleX(1);
   }
-}
-
-.navbar {
-  padding: 20px 160px;
-}
-
-.logo {
-  @include flexCenter;
-  font-size: 1.5rem;
-  font-weight: 900;
-  border-radius: $small-border-radius;
 }

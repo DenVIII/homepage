@@ -7,6 +7,10 @@
 // Importing keyframes
 @import "./scss/keyframes";
 
+// Importing base css
+
+@import "./scss/base";
+
 // Importing navbar
 
 @import "./scss/navbar";
@@ -30,92 +34,6 @@
 
 @import "./scss/footer";
 
+@import "./scss/media";
+
 /* styles.css */
-
-*,
-::after,
-::before {
-  box-sizing: border-box;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  list-style: none;
-  font-family: $main-font;
-  color: $text-color;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: $background-color;
-}
-
-section {
-  padding: 0 160px;
-}
-
-strong,
-.accent-text {
-  text-decoration: underline;
-  font-weight: 900;
-  background-color: $accent-color;
-  padding: 0.2em 0;
-  color: $white;
-}
-
-a {
-  text-decoration: none;
-  color: $text-color;
-}
-
-.title,
-.subtitle {
-  font-family: $title-font;
-  font-weight: 600;
-}
-
-.title {
-  font-size: 2rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  margin: 100px 0;
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.description {
-  text-align: justify;
-  font-size: $base-text-size;
-}
-
-.btn {
-  width: 200px;
-  height: 60px;
-  background-color: $background-color;
-  border: $base-border-width solid $black;
-  border-radius: $small-border-radius;
-  color: $black;
-  font-size: $base-text-size;
-  transform-origin: 0% 0%;
-  &__background {
-    width: calc(200px * $base-scale);
-    height: calc(60px * $base-scale);
-    background-color: $black;
-    border-radius: $small-border-radius;
-  }
-}
-
-.btn:hover {
-  cursor: pointer;
-  transition: 0.5s;
-  transform: scale($base-scale + 0.01);
-  //border-color: $accent-color;
-  //background-color: $accent-color;
-  //color: white;
-}

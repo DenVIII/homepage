@@ -1,14 +1,15 @@
 .hero {
   position: relative;
   margin-top: 40px;
+  margin-bottom: 0;
   padding-right: 0;
-  height: 80vh;
+  min-height: 100vh;
 
   &__title {
     position: relative;
     text-align: left;
     text-indent: 2.6ch;
-    max-width: 50vw;
+    max-width: 50%;
     font-size: 4rem;
     margin-bottom: 60px;
     font-family: $title-font;
@@ -20,6 +21,7 @@
     position: absolute;
     top: 0%;
     right: 0%;
+    max-width: 40%;
     max-height: 100%;
     object-fit: cover;
     border-radius: 10% 0 0 10%;
