@@ -1,7 +1,11 @@
 @media (max-width: 1024px) {
+  $card-width: 300px;
+  $padding-top: 30px;
+
   html {
     font-size: 14px;
   }
+
   section {
     padding: 0 60px;
     margin-bottom: 80px;
@@ -10,6 +14,7 @@
   .title {
     margin-bottom: 60px;
   }
+
   .navbar {
     padding: 15px 60px;
 
@@ -21,7 +26,6 @@
   }
 
   .hero {
-    $padding-top: 30px;
     min-height: 90vh;
     padding-top: $padding-top;
 
@@ -30,9 +34,58 @@
     }
   }
 
-  $card-width: 300px;
+  .projects {
+    &__img {
+      max-height: $card-width;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  $card-width: 240px;
+  .hero {
+    &__title {
+      font-size: 2.5rem;
+      text-align: justify;
+      text-indent: 0;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .subtitle {
+      max-width: 50%;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+  }
+
+  .navbar {
+    .menu {
+      &__item {
+        padding: 15px;
+      }
+    }
+  }
 
   .projects {
+    &__card {
+      .projects__img {
+        grid-area: 1 / 1 / 2 / 8;
+      }
+      .projects__descr {
+        grid-area: 1 / 8 / 2 / 13;
+      }
+    }
+
+    &__card:nth-child(2) {
+      .projects__descr {
+        grid-area: 1 / 1 / 2 / 6;
+      }
+      .projects__img {
+        grid-area: 1 / 6 / 2 / 13;
+      }
+    }
+
     &__img {
       max-height: $card-width;
     }
