@@ -3,20 +3,21 @@
   top: 0;
   z-index: 2;
   .logo:hover {
-    background-color: $white;
+    background-color: $black;
+    color: $white;
     transform: scale(0.95);
   }
 }
 
 .navbar.scrolled {
   .logo {
-    background-color: $white;
-    border-radius: $small-border-radius;
+    background-color: $black;
+    color: $white;
   }
   .menu {
     &__item {
-      background-color: $white;
-      border-radius: $small-border-radius;
+      background-color: $black;
+      color: $white;
     }
   }
 }
@@ -27,6 +28,16 @@
   justify-content: space-between;
 }
 .menu {
+  a:first-child > &__item {
+    border-top-left-radius: $small-border-radius;
+    border-bottom-left-radius: $small-border-radius;
+  }
+
+  a:last-child > &__item {
+    border-top-right-radius: $small-border-radius;
+    border-bottom-right-radius: $small-border-radius;
+  }
+
   &__item {
     position: relative;
     padding: 20px 30px;
@@ -39,7 +50,7 @@
     left: 25%;
     width: 50%;
     height: 2px;
-    background-color: $black;
+    background-color: $white;
     transform: scaleX(0);
     transform-origin: left;
     transition-delay: 0.25s;
@@ -48,8 +59,9 @@
 
   &__item:hover {
     cursor: pointer;
-    background-color: $white;
-    transform: scale(0.95);
+    background-color: $black;
+    color: $white;
+    transform: scale(0.9);
   }
 
   &__item:hover::before {
@@ -65,4 +77,5 @@
   @include flexCenter;
   font-size: 1.5rem;
   font-weight: 900;
+  border-radius: $small-border-radius;
 }
