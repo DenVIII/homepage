@@ -64,6 +64,12 @@
     }
     .projects__descr {
       grid-area: 1 / 9 / 2 / 13;
+      padding: 0 15px;
+      @include flexCenter(column);
+      .subtitle,
+      .description {
+        text-align: center;
+      }
     }
   }
 

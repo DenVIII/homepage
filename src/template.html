@@ -15,18 +15,18 @@
     <nav class="navbar">
       <a href="#" class="logo">Денис В.</a>
       <ul class="menu">
-        <a href="#projects"><li class="menu__item">Проекты</li></a>
-        <a href="#about"><li class="menu__item">Обо мне</li></a>
+        <a href="#projects"><li class="menu__item hidden">Проекты</li></a>
+        <a href="#about" ><li class="menu__item hidden">Обо мне</li></a>
         <a href="#contacts"><li class="menu__item">Контакты</li></a>
       </ul>
     </nav>
     <section class="hero">
       <h1 class="hero__title">
-        Дизайнер,
+        <span class="filling">Дизайнер,</span>
         <br />
-        Иллюстратор,
+        <span class="filling">Иллюстратор,</span>
         <br />
-        Фронт-энд разработчик
+        <span class="filling">Фронт-энд</span> <span class="filling">разработчик</span>
       </h1>
       <p class="subtitle">
         Cоздаю веб-сайты, которые <strong>привлекают</strong>
@@ -103,14 +103,16 @@
       </div>
     </section>
     <section id="contacts" class="contacts">
-      <h2 class="title">Будем<br> на связи: <div class="contacts__email">
-        <a
-          href="mailto:Denis226@gmail.com?subject=Предложение%20по%20сотрудничеству&body=Здравствуйте!"
-          ><div class="btn__background">
-        <button type="button" class="btn">@</button>
-      </div></a
-        >
-      </div></h2>
+      <div class="wrapper">
+        <h2 class="title">Будем<br> на связи:</h2>
+        <div class="contacts__email">
+          <a href="mailto:Denis226@gmail.com?subject=Предложение%20по%20сотрудничеству&body=Здравствуйте!">
+            <div class="btn__background">
+              <button type="button" class="btn">@</button>
+            </div>
+          </a>
+        </div>
+      </div>
       <div class="contacts__media">
         <a href="https://github.com/DenVIII" target="_blank"
           >GitHub</a>

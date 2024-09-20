@@ -15,6 +15,9 @@
     font-family: $title-font;
     font-weight: 600;
     animation: 1s indent ease-out;
+    .filling {
+      font-family: $title-font;
+    }
   }
 
   &__img {

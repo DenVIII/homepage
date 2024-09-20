@@ -2,10 +2,6 @@
   $card-width: 300px;
   $padding-top: 30px;
 
-  html {
-    font-size: 14px;
-  }
-
   section {
     padding: 0 60px;
     margin-bottom: 80px;
@@ -29,6 +25,10 @@
     min-height: 90vh;
     padding-top: $padding-top;
 
+    &__title {
+      font-size: 3.5rem;
+    }
+
     &__img {
       top: $padding-top;
     }
@@ -43,6 +43,7 @@
 
 @media (max-width: 768px) {
   $card-width: 240px;
+
   .hero {
     &__title {
       font-size: 2.5rem;
@@ -50,6 +51,7 @@
       text-indent: 0;
       text-align: left;
       margin-bottom: 40px;
+      animation: none;
     }
 
     .subtitle {
@@ -57,6 +59,10 @@
       margin-bottom: 40px;
       line-height: 1.5;
     }
+  }
+
+  section {
+    padding: 0 40px;
   }
 
   .navbar {
@@ -88,6 +94,216 @@
 
     &__img {
       max-height: $card-width;
+    }
+  }
+
+  .about {
+    &__card {
+      padding: 0 15px;
+
+      .description {
+        text-align: left;
+      }
+    }
+
+    &__card.career {
+      grid-area: 2 / 1 / 3 / 7;
+      margin-top: auto;
+      padding-left: 0;
+    }
+
+    &__card.self {
+      grid-area: 2 / 7 / 3 / 13;
+      padding-right: 0;
+    }
+
+    &__card.self::before {
+      left: -3%;
+    }
+  }
+
+  footer {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  $card-width: 50vw;
+  $padding-top: 15px;
+
+  section {
+    padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .filling {
+    background-color: $white;
+    display: inline-block;
+    margin-bottom: 5px;
+    opacity: 0.8;
+  }
+
+  .title {
+    margin-bottom: 40px;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    &__background {
+      margin-top: 0;
+    }
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    .logo {
+      font-size: 1.2rem;
+    }
+
+    .menu {
+      &__item {
+        padding: 10px 10px;
+        border-radius: $small-border-radius;
+      }
+    }
+  }
+
+  .hero {
+    padding-top: $padding-top;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+    @include flexCenter(column);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vw;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    &__img {
+      top: $padding-top;
+      min-width: 100%;
+      border-radius: 0 0 0 0;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 100%;
+      margin-top: 50%;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      max-width: 100%;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      &__background {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .projects {
+    padding: 0;
+
+    &__img {
+      max-height: $card-width;
+    }
+
+    &__card {
+      .projects__img {
+        grid-area: 1 / 1 / 2 / 7;
+      }
+      .projects__descr {
+        grid-area: 1 / 7 / 2 / 13;
+      }
+    }
+
+    &__card:nth-child(2) {
+      .projects__descr {
+        grid-area: 1 / 1 / 2 / 7;
+      }
+      .projects__img {
+        grid-area: 1 / 7 / 2 / 13;
+      }
+    }
+
+    .subtitle {
+      margin: 10px 0;
+    }
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+
+  .about {
+    .container {
+      @include flexCenter(column);
+    }
+
+    &__card.self,
+    &__card.career {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    &__card.self {
+      border-top: $base-border-width solid $black;
+    }
+
+    &__card.self::before {
+      height: 0;
+      width: 0;
+    }
+  }
+
+  .contacts {
+    &__media {
+      flex-wrap: wrap;
+      font-size: 1.5rem;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__email {
+      margin: 0;
+    }
+    .btn__background {
+      margin: 15px 0;
+    }
+  }
+
+  footer {
+    padding: 30px 10px;
+    .description {
+      font-size: 0.8rem;
+    }
+    .description:last-of-type {
+      text-align: right;
     }
   }
 }
