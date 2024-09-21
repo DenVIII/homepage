@@ -211,6 +211,7 @@
       max-width: 100%;
       text-align: center;
       padding: 0 10px;
+      margin-bottom: 10px;
     }
 
     .btn {
@@ -262,6 +263,14 @@
     &__card.career {
       padding: 20px 0;
       text-align: center;
+    }
+
+    &__card.self {
+      padding-top: 40px;
+    }
+
+    &__card.career {
+      padding-bottom: 40px;
     }
 
     &__card.self {
